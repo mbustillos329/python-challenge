@@ -31,24 +31,22 @@ with open(csvpath,"r") as csv_file:
     #The total number of votes cast
     totvotes = len(voterid)
 
+    #percentages
     pkhan = str(round(100*(khan/totvotes),3)) + "%"
     pcorrey = str(round(100*(correy/totvotes),3)) + "%"
     pli= str(round(100*(li/totvotes),3)) + "%"
     potooley = str(round(100*(otooley/totvotes),3)) + "%"
 
+# printed output
+print("Election Results", file=open("pypoll.txt", "a"))
+print("--------------------", file=open("pypoll.txt", "a"))
+print("Total Votes: " + str(totvotes), file=open("pypoll.txt", "a"))
+print("--------------------", file=open("pypoll.txt", "a"))
+print("Khan: " + pkhan + " "+ str(khan), file=open("pypoll.txt", "a"))
+print("Correy: " + pcorrey + " "+ str(correy), file=open("pypoll.txt", "a"))
+print("Li: " + pli + " "+ str(li), file=open("pypoll.txt", "a"))
+print("O'Tooley: " + potooley + " "+ str(otooley), file=open("pypoll.txt", "a"))
+print("--------------------", file=open("pypoll.txt", "a"))
+print("Winner: Khan", file=open("pypoll.txt", "a"))
+print('--------------------', file=open("pypoll.txt", "a"))
 
-print("Election Results")
-print("--------------------")
-print("Total Votes: " + str(totvotes))
-print("--------------------")
-print("Khan: " + pkhan + " "+ str(khan))
-print("Correy: " + pcorrey + " "+ str(correy))
-print("Li: " + pli + " "+ str(li))
-print("O'Tooley: " + potooley + " "+ str(otooley))
-print("--------------------")
-print("Winner: ")
-print('--------------------')
-
-
-
-        

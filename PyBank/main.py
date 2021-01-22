@@ -40,15 +40,15 @@ with open(csvpath,"r") as csv_file:
     gdecrease = min(plc)
 
 # printed results
-print("Financial Analysis")
-print("------------------")
-print("Total Months: " + str(count))
-print("Total: $" + str(net_pl))
-print("Average Change: $" + str(avg_ch))
-print("Greatest  Increase in Profits: " + str(gincrease))
-print("Greatest  Decrease in Profits: " + str(gdecrease))
+print("Financial Analysis", file=open("pybank.txt", "a"))
+print("------------------", file=open("pybank.txt", "a"))
+print("Total Months: " + str(count), file=open("pybank.txt", "a"))
+print("Total: $" + str(net_pl), file=open("pybank.txt", "a"))
+print("Average Change: $" + str(avg_ch), file=open("pybank.txt", "a"))
+print("Greatest  Increase in Profits: " + str(gincrease), file=open("pybank.txt", "a"))
+print("Greatest  Decrease in Profits: " + str(gdecrease), file=open("pybank.txt", "a"))
 
-# export text file 
+
 
 
 
